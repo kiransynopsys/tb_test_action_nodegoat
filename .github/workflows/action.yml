@@ -30,7 +30,8 @@ jobs:
       - name: Use synopsys-action
         uses: synopsys-sig/synopsys-action@main
         with:
-
+          
+          bridge_download_url: ${{ env.LINUX_BRIDGE_URL}}
           # Polaris
           #polaris_serverUrl: ${{ secrets.POLARIS_SERVER_URL }}
           #polaris_accessToken: ${{ secrets.POLARIS_ACCESS_TOKEN }}
@@ -59,6 +60,5 @@ jobs:
           #coverity_branch_name: ${{ secrets.COVERITY_BRANCH_NAME }}
           # Mandatory for windows hosted environment
           #coverity_install_directory: "/root"
-          bridge_download_url: ${{ env.LINUX_BRIDGE_URL }}
           coverity_automation_prcomment: true
 
