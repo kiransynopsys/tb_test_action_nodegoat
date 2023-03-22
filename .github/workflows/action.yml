@@ -39,12 +39,12 @@ jobs:
           #polaris_assessment_types: "SAST"
 
           # Blackduck
-          blackduck_url: ${{ secrets.BLACKDUCK_URL}}
-          blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN}}
+          blackduck_url: 'https://testing.blackduck.synopsys.com/'
+          blackduck_apiToken: 'NGExZjY3ODctNzBmZS00YzY5LWI1NjEtNzA5Njg3NGRmNmY5OjcyZDU5YWRmLTQxZmQtNDNkMy05OTI4LTBmNjcyMzliNTQ0MQ=='
           blackduck_scan_full: true
           #blackduck_install_directory: "/root"
           blackduck_scan_failure_severities: 'ALL'
-          github_token: ${{ secrets.GITHUB_TOKEN}}
+          github_token: ${{ secrets.GH_TOKEN}}
           blackduck_automation_fixpr: true
           blackduck_automation_prcomment: true
 
