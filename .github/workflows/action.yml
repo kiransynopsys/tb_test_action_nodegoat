@@ -31,7 +31,7 @@ jobs:
         uses: synopsys-sig/synopsys-action@main
         with:
           
-          bridge_download_url: ${{ env.LINUX_BRIDGE_URL}}
+          bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/0.1.229/synopsys-bridge-0.1.229-linux64.zip"
           # Polaris
           #polaris_serverUrl: ${{ secrets.POLARIS_SERVER_URL }}
           #polaris_accessToken: ${{ secrets.POLARIS_ACCESS_TOKEN }}
