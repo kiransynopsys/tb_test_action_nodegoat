@@ -24,7 +24,8 @@ jobs:
       MAC_BRIDGE_URL: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/0.1.225/synopsys-bridge-0.1.225-macosx.zip"
       LINUX_BRIDGE_URL: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/0.1.225/synopsys-bridge-0.1.225-linux64.zip"
       WINDOWS_BRIDGE_URL: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/0.1.225/synopsys-bridge-0.1.225-win64.zip"
-
+      detect_project_name: "tb_gh_nodegoat_1"
+      
     steps:
       - uses: actions/checkout@v2
       - name: Use synopsys-action
@@ -44,10 +45,11 @@ jobs:
           blackduck_apiToken: 'NGExZjY3ODctNzBmZS00YzY5LWI1NjEtNzA5Njg3NGRmNmY5OjcyZDU5YWRmLTQxZmQtNDNkMy05OTI4LTBmNjcyMzliNTQ0MQ=='
           blackduck_scan_full: true
           #blackduck_install_directory: "/root"
-          blackduck_scan_failure_severities: 'ALL'
+          blackduck_scan_failure_severities: "ALL"
           github_token: ${{ secrets.GH_TOKEN}}
           blackduck_automation_fixpr: true
           blackduck_automation_prcomment: true
+          detect_project_name: "tb_gh_nodegoat"
 
           #Coverity
           #coverity_url: 'https://cnc.chuckaude.com/'
