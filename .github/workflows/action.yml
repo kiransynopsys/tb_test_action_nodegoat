@@ -47,7 +47,7 @@ jobs:
           blackduck_scan_failure_severities: 'ALL'
           github_token: ${{ secrets.GH_TOKEN}}
           blackduck_automation_fixpr: true
-          #blackduck_automation_prcomment: true
+          blackduck_automation_prcomment: true
 
           #Coverity
           #coverity_url: 'https://cnc.chuckaude.com/'
