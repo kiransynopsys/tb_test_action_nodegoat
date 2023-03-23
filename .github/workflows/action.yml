@@ -50,6 +50,7 @@ jobs:
           blackduck_automation_fixpr: true
           blackduck_automation_prcomment: true
           detect_project_name: "tb_gh_nodegoat"
+          
 
           #Coverity
           #coverity_url: 'https://cnc.chuckaude.com/'
