@@ -63,6 +63,6 @@ jobs:
           #coverity_branch_name: ${{ secrets.COVERITY_BRANCH_NAME }}
           # Mandatory for windows hosted environment
           #coverity_install_directory: "/root"
-          #coverity_automation_prcomment: true
+          #coverity_automation_prcomment: true   aa
           
 
