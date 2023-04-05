@@ -31,8 +31,8 @@ jobs:
       - name: Use synopsys-action
         uses: synopsys-sig/synopsys-action@main
         with:
-          
-          bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/0.1.229/synopsys-bridge-0.1.229-win64.zip"
+          include_diagnostics: true
+          #bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/0.1.229/synopsys-bridge-0.1.229-win64.zip"
           # Polaris
           #polaris_serverUrl: ${{ secrets.POLARIS_SERVER_URL }}
           #polaris_accessToken: ${{ secrets.POLARIS_ACCESS_TOKEN }}
@@ -49,7 +49,7 @@ jobs:
           github_token: ${{ secrets.GH_TOKEN}}
           blackduck_automation_fixpr: true
           blackduck_automation_prcomment: true
-          detect_project_name: "tb_gh_nodegoat"
+          #detect_project_name: "tb_gh_nodegoat"
           
 
           #Coverity
