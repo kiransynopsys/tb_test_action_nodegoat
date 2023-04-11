@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Use synopsys-action
-        uses: synopsys-sig/synopsys-action@main
+        uses: synopsys-sig/synopsys-action@1.1.0
         with:
           include_diagnostics: true
           #polaris_serverUrl: ${{ secrets.POLARIS_SERVER_URL }}
