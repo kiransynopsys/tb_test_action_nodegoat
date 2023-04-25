@@ -18,11 +18,11 @@ jobs:
         uses: synopsys-sig/synopsys-action@main
         with:
           include_diagnostics: true
-          polaris_serverUrl: ${{ secrets.POLARIS_URL }}
-          polaris_accessToken: ${{ secrets.POLARIS_TOKEN }}
-          polaris_application_name: "test_tb"
-          polaris_project_name: "tb_test_action_nodegoat"
-          polaris_assessment_types: "SAST"
+          #polaris_serverUrl: ${{ secrets.POLARIS_URL }}
+          #polaris_accessToken: ${{ secrets.POLARIS_TOKEN }}
+          #polaris_application_name: "test_tb"
+          #polaris_project_name: "tb_test_action_nodegoat"
+          #polaris_assessment_types: "SAST"
 
           # Blackduck test
           #blackduck_url: ${{ secrets.BD_URL}}
@@ -34,10 +34,10 @@ jobs:
           #blackduck_automation_prcomment: true
   
           
-          #coverity_url: ${{ secrets.coverity_url}}
-          ##coverity_user: ${{ secrets.coverity_user}}
-          #coverity_passphrase: ${{ secrets.coverity_passphrase}}'
-          #coverity_project_name: 'tb_test_action_nodegoat'
-          #coverity_stream_name: 'tb_test_action_nodegoat'
+          coverity_url: ${secrets.cov_url}
+          coverity_user: ${secrets.cov_user}
+          coverity_passphrase: ${secrets.cov_pass}
+          coverity_project_name: 'tb_test_action_nodegoat'
+          coverity_stream_name: 'tb_test_action_nodegoat'
           
 
