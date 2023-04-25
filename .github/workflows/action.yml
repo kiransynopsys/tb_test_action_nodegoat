@@ -34,9 +34,9 @@ jobs:
           #blackduck_automation_prcomment: true
   
           
-          coverity_url: 'https://cnc.chuckaude.com/'
-          coverity_user: 'siguser'
-          coverity_passphrase: 'SIGpass8!'
+          coverity_url: ${{secrets.cov_url}}
+          coverity_user: ${{secrets.cov_user}}
+          coverity_passphrase: ${{secrets.cov_pass}}
           coverity_project_name: 'tb_test_action_nodegoat'
           coverity_stream_name: 'tb_test_action_nodegoat'
           
