@@ -19,7 +19,7 @@ jobs:
         with:
           include_diagnostics: true
           polaris_serverUrl: ${{ secrets.POLARIS_URL }}
-          polaris_accessToken: ${{ secrets.POLARIS__TOKEN }}
+          polaris_accessToken: ${{ secrets.POLARIS_TOKEN }}
           polaris_application_name: "test_tb"
           polaris_project_name: "tb_test_action_nodegoat"
           polaris_assessment_types: "SAST"
