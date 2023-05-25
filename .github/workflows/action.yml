@@ -19,11 +19,11 @@ jobs:
         with:
           include_diagnostics: true
           
-          polaris_serverUrl: ${{secrets.POLARIS_URL}}
-          polaris_accessToken: ${{secrets.POLARIS_TOKEN}}
-          polaris_application_name: "fAST Dynamic Projects"
-          polaris_project_name: "fAST DAST Engine"
-          polaris_assessment_types: "SCA,SAST"
+          #polaris_serverUrl: ${{secrets.POLARIS_URL}}
+          #polaris_accessToken: ${{secrets.POLARIS_TOKEN}}
+          #polaris_application_name: "fAST Dynamic Projects"
+          #polaris_project_name: "fAST DAST Engine"
+          #polaris_assessment_types: "SCA,SAST"
 
           #blackduck_url: ${{ secrets.BD_URL}}
           #blackduck_apiToken: ${{ secrets.BD_TOKEN}}
@@ -36,7 +36,7 @@ jobs:
           #coverity_url: ${{secrets.cov_url}}
           #coverity_user: ${{secrets.cov_user}}
           #coverity_passphrase: ${{secrets.cov_pass}}
-          #coverity_project_name: 'tb_test_action_nodegoat'
-          #coverity_stream_name: 'tb_test_action_nodegoat'
+          coverity_project_name: 'tb test'
+          coverity_stream_name: 'tb nodegoat'
           
 
