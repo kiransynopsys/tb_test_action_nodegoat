@@ -21,9 +21,9 @@ jobs:
           
           polaris_serverUrl: ${{secrets.POLARIS_URL}}
           polaris_accessToken: ${{secrets.POLARIS_TOKEN}}
-          polaris_application_name: 'test_tb'
-          polaris_project_name: 'tb_test_action_nodegoat'
-          polaris_assessment_types: 'SAST'
+          polaris_application_name: "fAST Dynamic Projects"
+          polaris_project_name: "fAST DAST Engine"
+          polaris_assessment_types: "SCA,SAST"
 
           #blackduck_url: ${{ secrets.BD_URL}}
           #blackduck_apiToken: ${{ secrets.BD_TOKEN}}
