@@ -33,8 +33,8 @@ jobs:
           #blackduck_automation_fixpr: true
           #blackduck_automation_prcomment: true
           
-          #coverity_url: ${{secrets.cov_url}}
-          #coverity_user: ${{secrets.cov_user}}
+          coverity_url: ${{secrets.cov_url}}
+          coverity_user: ${{secrets.cov_user}}
           #coverity_passphrase: ${{secrets.cov_pass}}
           coverity_project_name: 'tb test'
           coverity_stream_name: 'tb nodegoat'
