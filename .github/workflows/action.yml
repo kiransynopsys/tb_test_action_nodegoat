@@ -17,7 +17,7 @@ jobs:
       - name: Use synopsys-action
         uses: synopsys-sig/synopsys-action@1.2.0
         with:
-          #include_diagnostics: true
+          include_diagnostics: true
           
           #bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/0.2.42/synopsys-bridge-0.2.42-linux64.zip"
           polaris_serverUrl: ${{secrets.POLARIS_URL}}
