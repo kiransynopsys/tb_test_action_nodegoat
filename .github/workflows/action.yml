@@ -20,11 +20,11 @@ jobs:
           include_diagnostics: true
           
           #bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/0.2.42/synopsys-bridge-0.2.42-linux64.zip"
-          polaris_serverUrl: ${{secrets.POLARIS_URL}}
-          polaris_accessToken: ${{secrets.POLARIS_TOKEN}}
-          polaris_application_name: "tb_test"
-          polaris_project_name: "tb_test_action_nodegoat"
-          polaris_assessment_types: "SCA,SAST"
+          #polaris_serverUrl: ${{secrets.POLARIS_URL}}
+          #polaris_accessToken: ${{secrets.POLARIS_TOKEN}}
+          #polaris_application_name: "tb_test"
+          #polaris_project_name: "tb_test_action_nodegoat"
+          #polaris_assessment_types: "SCA,SAST"
 
           #blackduck_url: "https://testing.blackduck.synopsys.com/"
           #blackduck_apiToken: ""
@@ -34,11 +34,11 @@ jobs:
           #blackduck_automation_fixpr: true
           #blackduck_automation_prcomment: true
           
-          #coverity_url: ${{secrets.cov_url}}
-          #coverity_user: ${{secrets.cov_user}}
-          #coverity_passphrase: ${{secrets.cov_pass}}
-          #coverity_project_name: 'tb_test'
-          #coverity_stream_name: 'tb_nodegoat'
+          coverity_url: ${{secrets.cov_url}}
+          coverity_user: ${{secrets.cov_user}}
+          coverity_passphrase: ${{secrets.cov_pass}}
+          coverity_project_name: 'tb_test'
+          coverity_stream_name: 'tb_action_nodegoat'
           #coverity_repository_name: 'tb_test'
           #coverity_branch_name: 'tb_nodegoat'
           
