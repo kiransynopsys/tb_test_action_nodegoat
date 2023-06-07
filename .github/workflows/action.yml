@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: tb1
     #env: 
       #LINUX_BRIDGE_URL: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/0.2.42/synopsys-bridge-0.2.42-linux64.zip"
       #MAC_BRIDGE_URL: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/0.1.225/synopsys-bridge-0.1.225-mac64.zip"
