@@ -1,45 +1,23 @@
-name: Run Synopsys-Action
+
+name: CI-Polaris
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-  workflow_dispatch:
+    branches: [ master, main ]
+  workflow_dispatch:  
 jobs:
   build:
-    runs-on: self-hosted
-    #env: 
-      #LINUX_BRIDGE_URL: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/0.2.42/synopsys-bridge-0.2.42-linux64.zip"
-      #MAC_BRIDGE_URL: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/0.1.225/synopsys-bridge-0.1.225-mac64.zip"
-      ##WINDOWS_BRIDGE_URL: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/0.1.225/synopsys-bridge-0.1.225-win64.zip"
+    runs-on: [ ubuntu-latest ]
     steps:
-      - uses: actions/checkout@v2
-      - name: Use synopsys-action
-        uses: synopsys-sig/synopsys-action@1.2.0
+      - name: Checkout Source
+        uses: actions/checkout@v3
+        
+      - name: Polaris Scan
+        uses: synopsys-sig/synopsys-action@v1.2.0
         with:
-          #include_diagnostics: true
-          
-          #bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/0.2.42/synopsys-bridge-0.2.42-linux64.zip"
-          #polaris_serverUrl: ${{secrets.POLARIS_URL}}
-          #polaris_accessToken: ${{secrets.POLARIS_TOKEN}}
-          #polaris_application_name: "tb_test"
-          #polaris_project_name: "tb_test_action_nodegoat"
-          #polaris_assessment_types: "SCA,SAST"
+          polaris_serverUrl: ${{ secrets.POLARIS_SERVERURL }}
+          polaris_accessToken: ${{ secrets.POLARIS_ACCESSTOKEN }}
+          polaris_application_name: ${{ github.event.repository.name }}
+          polaris_project_name: ${{ github.event.repository.name }}
 
-          #blackduck_url: "https://testing.blackduck.synopsys.com/"
-          #blackduck_apiToken: ""
-          #blackduck_scan_full: true
-          #blackduck_scan_failure_severities: "ALL"
-          #github_token: ${{ secrets.GH_TOKEN}}
-          #blackduck_automation_fixpr: true
-          #blackduck_automation_prcomment: true
-          
-          coverity_url: ${{secrets.cov_url}}
-          coverity_user: ${{secrets.cov_user}}
-          coverity_passphrase: ${{secrets.cov_pass}}
-          coverity_project_name: 'tb_test'
-          coverity_stream_name: 'tb_action_nodegoat'
-          #coverity_repository_name: 'tb_test'
-          #coverity_branch_name: 'tb_nodegoat'
-          
-
+          polaris_assessment_types: "SAST,SCA"
+          include_diagnostics: true
